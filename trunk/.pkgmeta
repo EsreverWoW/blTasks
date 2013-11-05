@@ -1,0 +1,3 @@
+package-as: blTasks
+manual-changelog: ChangeLog.txt
+enable-nolib-creation: no
