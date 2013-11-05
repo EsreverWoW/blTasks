@@ -1,0 +1,27 @@
+Identifier = "blUtil"
+Name =
+{
+	English = "blUtil",
+	French  = "blUtil",
+	German  = "blUtil",
+}
+NameShort = "blUtil"
+Description =
+{
+	English = "A utility library containing commonly used stuff.",
+}
+Author = "Baanano"
+Version = "0.5.0 Alpha"
+Email = "baanano.rift@gmail.com"
+Environment = "2.4"
+RunOnStartup =
+{
+	"Prolog.lua",
+	"Copy.lua",
+	"Handle.lua",
+	"Player.lua",
+	"WeakReference.lua",
+	"Epilog.lua",
+-- TODO Documentation
+}
+

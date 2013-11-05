@@ -1,0 +1,35 @@
+Identifier = "blTasks"
+Name =
+{
+	English = "blTasks",
+	French  = "blTasks",
+	German  = "blTasks",
+}
+NameShort = "blTasks"
+Description =
+{
+	English = "blTasks is a library to split code execution over multiple frames to avoid lagging your users and being barked by the Evil Watchdog.",
+}
+Author = "Baanano"
+Version = "0.9 Beta"
+Email = "baanano.rift@gmail.com"
+Environment = "2.4"
+Embed =
+{
+	blUtil = true,
+}
+Dependencies =
+{
+	blUtil = { "required", "before", },
+}
+RunOnStartup =
+{
+	"Prolog.lua",
+	"Constants.lua",
+	"Task.lua",
+	"Scheduler.lua",
+	"Dispatcher.lua",
+	"WaitCondition.lua",
+	"Epilog.lua",
+	"ApiBrowser.lua",
+}
