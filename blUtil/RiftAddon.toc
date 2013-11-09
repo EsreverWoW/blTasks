@@ -8,12 +8,16 @@ Name =
 NameShort = "blUtil"
 Description =
 {
-	English = "A utility library containing commonly used stuff.",
+	English = "An utility library containing commonly used stuff.",
 }
 Author = "Baanano"
-Version = "0.5.0 Alpha"
+Version = "0.5.0 r2"
 Email = "baanano.rift@gmail.com"
 Environment = "2.4"
+Dependencies =
+{
+	ApiBrowser = { "optional", "before", },
+}
 RunOnStartup =
 {
 	"Prolog.lua",
@@ -22,6 +26,6 @@ RunOnStartup =
 	"Player.lua",
 	"WeakReference.lua",
 	"Epilog.lua",
--- TODO Documentation
+	"ApiBrowser.lua",
 }
 

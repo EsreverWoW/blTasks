@@ -32,6 +32,7 @@ meta.__gc =
 				tasks[taskID] = false
 				freeIDs[taskID] = true
 			end
+			Internal.Scheduler.Remove(taskID)
 		end
 	end
 
@@ -48,7 +49,7 @@ end
 local function GetTaskByHandle(handle)
 	local taskID = handle and handle2task[handle]
 	local task = taskID and tasks[taskID]
-	assert(task, "Invalid task handle.")
+	assert(task, "Invalid task handle. HANDLE: " .. tostring(handle) .. " / TASK ID: " .. tostring(taskID) .. " / TASK: " .. tostring(task))
 	return task
 end
 
@@ -310,6 +311,8 @@ function Public.Task.Create(taskFunction, addon)
 	
 	tasks[id] = task
 	handle2task[handle] = id
+	
+	Internal.Scheduler.Add(id)
 	
 	return handle
 end
