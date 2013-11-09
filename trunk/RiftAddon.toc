@@ -11,7 +11,7 @@ Description =
 	English = "blTasks is a library to split code execution over multiple frames to avoid lagging your users and being barked by the Evil Watchdog.",
 }
 Author = "Baanano"
-Version = "0.9 Beta"
+Version = "0.10 r4"
 Email = "baanano.rift@gmail.com"
 Environment = "2.4"
 Embed =
@@ -21,6 +21,7 @@ Embed =
 Dependencies =
 {
 	blUtil = { "required", "before", },
+	ApiBrowser = { "optional", "before", },
 }
 RunOnStartup =
 {

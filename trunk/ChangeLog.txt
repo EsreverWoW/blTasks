@@ -1,2 +1,6 @@
+	Alpha 0.10 r4
+- New tasks are now put on hold under heavy load conditions
+- Inactive tasks are now swapped out of the scheduler under heavy load conditions
+	
 	Beta 0.9
 - First release

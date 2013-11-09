@@ -9,6 +9,8 @@ local addonID = addonDetail.identifier
 local Internal, Public = addonData.Internal, addonData.Public
 
 function Public.Copy.Shallow(origin)
+	if type(origin) ~= "table" then return origin end
+	
 	local copy = {}
 	
 	for key, value in pairs(origin) do 
@@ -19,10 +21,12 @@ function Public.Copy.Shallow(origin)
 end
 
 function Public.Copy.Deep(origin)
+	if type(origin) ~= "table" then return origin end
+	
 	local copy = {}
 	
 	for key, value in pairs(origin) do 
-		copy[key] = type(value) == "table" and Public.Copy.Deep(value) or value
+		copy[key] = Public.Copy.Deep(value)
 	end
 	
 	return copy

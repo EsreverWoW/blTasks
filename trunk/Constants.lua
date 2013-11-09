@@ -18,6 +18,7 @@ Internal.Constants.TASK_INTERVAL =
 	MEDIUM = 0.020,
 	LONG = 0.010,
 }
+Internal.Constants.MAX_ACTIVE_TASKS = 100
 
 -- ***************************************************************************************************************************************************
 -- * These shouldn't be modified!                                                                                                                    *
